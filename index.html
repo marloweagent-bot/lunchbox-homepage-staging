@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lunchbox Packs | Anti-Theft Festival Hydration Packs</title>
+    <meta name="description" content="The original anti-theft festival pack. Built by ravers, for ravers. Secure your belongings and stay hydrated at every event.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="https://www.lunchboxpacks.com/cdn/shop/files/LB_Logo_BLK_32x32.png?v=1714088899" type="image/png">
+    
+    <style>
+        :root {
+            --black: #000000;
+            --white: #FFFFFF;
+            --gray-100: #F5F5F5;
+            --gray-200: #E5E5E5;
+            --gray-300: #D4D4D4;
+            --gray-600: #525252;
+            --gray-800: #262626;
+            --accent: #FF4D00;
+            --accent-hover: #E64500;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--gray-800);
+            line-height: 1.6;
+            background: var(--white);
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: var(--white);
+            z-index: 1000;
+            border-bottom: 1px solid var(--gray-200);
+        }
+        
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 24px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            height: 40px;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--gray-800);
+            font-weight: 500;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 24px;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.2s;
+            cursor: pointer;
+            border: none;
+        }
+        
+        .btn-primary {
+            background: var(--black);
+            color: var(--white);
+        }
+        
+        .btn-primary:hover {
+            background: var(--gray-800);
+        }
+        
+        .btn-accent {
+            background: var(--accent);
+            color: var(--white);
+        }
+        
+        .btn-accent:hover {
+            background: var(--accent-hover);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            color: var(--black);
+            border: 2px solid var(--black);
+        }
+        
+        .btn-outline:hover {
+            background: var(--black);
+            color: var(--white);
+        }
+        
+        /* Hero */
+        .hero {
+            padding: 120px 0 80px;
+            background: linear-gradient(135deg, #000 0%, #1a1a1a 100%);
+            color: var(--white);
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+        }
+        
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .hero-content h1 {
+            font-size: 56px;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 24px;
+        }
+        
+        .hero-content h1 span {
+            color: var(--accent);
+        }
+        
+        .hero-content p {
+            font-size: 20px;
+            opacity: 0.9;
+            margin-bottom: 32px;
+            max-width: 500px;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        
+        .hero-image {
+            position: relative;
+        }
+        
+        .hero-image img {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+            display: block;
+        }
+        
+        .hero-badge {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background: var(--accent);
+            color: var(--white);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        /* Stats Bar */
+        .stats-bar {
+            background: var(--gray-100);
+            padding: 40px 0;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            text-align: center;
+        }
+        
+        .stat-item h3 {
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--black);
+            margin-bottom: 8px;
+        }
+        
+        .stat-item p {
+            font-size: 14px;
+            color: var(--gray-600);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        /* Section styling */
+        section {
+            padding: 100px 0;
+        }
+        
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 60px;
+        }
+        
+        .section-label {
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent);
+            margin-bottom: 16px;
+        }
+        
+        .section-title {
+            font-size: 42px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 16px;
+        }
+        
+        .section-subtitle {
+            font-size: 18px;
+            color: var(--gray-600);
+        }
+        
+        /* Partners/As Seen On */
+        .partners {
+            background: var(--white);
+            padding: 60px 0;
+            border-bottom: 1px solid var(--gray-200);
+        }
+        
+        .partners-title {
+            text-align: center;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--gray-600);
+            margin-bottom: 40px;
+        }
+        
+        .partners-grid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 60px;
+            flex-wrap: wrap;
+        }
+        
+        .partners-grid img {
+            height: 50px;
+            width: auto;
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: all 0.3s;
+        }
+        
+        .partners-grid img:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+        
+        /* Community Section */
+        .community {
+            background: var(--gray-100);
+        }
+        
+        .community-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        .community-card {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+        }
+        
+        .community-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .community-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .community-card-content {
+            padding: 24px;
+        }
+        
+        .community-card h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        
+        .community-card p {
+            font-size: 14px;
+            color: var(--gray-600);
+        }
+        
+        /* Product Suite */
+        .products {
+            background: var(--white);
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+        
+        .product-card {
+            background: var(--gray-100);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+        
+        .product-card:hover {
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            transform: translateY(-5px);
+        }
+        
+        .product-card img {
+            width: 100%;
+            aspect-ratio: 1;
+            object-fit: cover;
+            background: #f0f0f0;
+        }
+        
+        .product-card-content {
+            padding: 20px;
+        }
+        
+        .product-card h3 {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+        
+        .product-card .price {
+            font-size: 18px;
+            font-weight: 800;
+            color: var(--accent);
+        }
+        
+        .product-card .tagline {
+            font-size: 13px;
+            color: var(--gray-600);
+            margin-top: 8px;
+        }
+        
+        /* Featured Product (Hydration Pack) */
+        .featured-product {
+            background: var(--black);
+            color: var(--white);
+        }
+        
+        .featured-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+        
+        .featured-image {
+            position: relative;
+        }
+        
+        .featured-image img {
+            width: 100%;
+            border-radius: 12px;
+        }
+        
+        .featured-content h2 {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 24px;
+        }
+        
+        .featured-content .price-tag {
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--accent);
+            margin-bottom: 24px;
+        }
+        
+        .feature-list {
+            list-style: none;
+            margin-bottom: 32px;
+        }
+        
+        .feature-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .feature-list li::before {
+            content: "✓";
+            color: var(--accent);
+            font-weight: bold;
+        }
+        
+        /* Customization */
+        .customization {
+            background: linear-gradient(180deg, var(--gray-100) 0%, var(--white) 100%);
+        }
+        
+        .customization-showcase {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .customization-item {
+            text-align: center;
+        }
+        
+        .customization-item img {
+            width: 100%;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            aspect-ratio: 1;
+            object-fit: cover;
+        }
+        
+        .customization-item h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        
+        .customization-item p {
+            font-size: 14px;
+            color: var(--gray-600);
+        }
+        
+        /* Social Proof */
+        .social-proof {
+            background: var(--white);
+        }
+        
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        
+        .social-item {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            aspect-ratio: 1;
+        }
+        
+        .social-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+        
+        .social-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        .social-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 20px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: var(--white);
+        }
+        
+        .social-overlay span {
+            font-size: 14px;
+            font-weight: 600;
+        }
+        
+        /* Reviews */
+        .reviews {
+            background: var(--gray-100);
+        }
+        
+        .reviews-stats {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .reviews-rating {
+            font-size: 64px;
+            font-weight: 800;
+            color: var(--black);
+        }
+        
+        .reviews-stars {
+            font-size: 32px;
+            color: #FFD700;
+            margin: 16px 0;
+        }
+        
+        .reviews-count {
+            font-size: 18px;
+            color: var(--gray-600);
+        }
+        
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        .review-card {
+            background: var(--white);
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+        
+        .review-card .stars {
+            color: #FFD700;
+            font-size: 18px;
+            margin-bottom: 16px;
+        }
+        
+        .review-card p {
+            font-size: 15px;
+            line-height: 1.7;
+            color: var(--gray-800);
+            margin-bottom: 20px;
+        }
+        
+        .review-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .review-author-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--gray-200);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: var(--gray-600);
+        }
+        
+        .review-author-info h4 {
+            font-size: 14px;
+            font-weight: 700;
+        }
+        
+        .review-author-info span {
+            font-size: 12px;
+            color: var(--gray-600);
+        }
+        
+        /* CTA Section */
+        .cta {
+            background: var(--black);
+            color: var(--white);
+            text-align: center;
+        }
+        
+        .cta h2 {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 24px;
+        }
+        
+        .cta p {
+            font-size: 20px;
+            opacity: 0.9;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--gray-800);
+            color: var(--white);
+            padding: 60px 0 30px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-brand img {
+            height: 40px;
+            margin-bottom: 20px;
+            filter: brightness(0) invert(1);
+        }
+        
+        .footer-brand p {
+            font-size: 14px;
+            opacity: 0.7;
+            max-width: 300px;
+        }
+        
+        .footer-links h4 {
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-links a {
+            color: var(--white);
+            text-decoration: none;
+            opacity: 0.7;
+            font-size: 14px;
+            transition: opacity 0.2s;
+        }
+        
+        .footer-links a:hover {
+            opacity: 1;
+        }
+        
+        .footer-bottom {
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+            font-size: 14px;
+            opacity: 0.7;
+        }
+        
+        /* Staging Banner */
+        .staging-banner {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent);
+            color: var(--white);
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 600;
+            z-index: 9999;
+            box-shadow: 0 4px 20px rgba(255, 77, 0, 0.4);
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 1024px) {
+            .hero-grid,
+            .featured-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .hero-content h1 {
+                font-size: 42px;
+            }
+            
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .reviews-grid,
+            .community-grid,
+            .customization-showcase {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 640px) {
+            .hero-content h1 {
+                font-size: 32px;
+            }
+            
+            .section-title {
+                font-size: 28px;
+            }
+            
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .social-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Staging Banner -->
+    <div class="staging-banner">📋 STAGING PREVIEW — Not Live</div>
+    
+    <!-- Header -->
+    <header>
+        <div class="header-inner">
+            <img src="https://www.lunchboxpacks.com/cdn/shop/files/lunchbox-logo-black.png?v=1714088899" alt="Lunchbox Packs" class="logo">
+            <ul class="nav-links">
+                <li><a href="#products">Shop Packs</a></li>
+                <li><a href="#customization">Customize</a></li>
+                <li><a href="#community">Community</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+            </ul>
+            <a href="https://www.lunchboxpacks.com/pages/get-lunchbox" class="btn btn-primary" target="_blank">Shop Now</a>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <h1>Protect Your <span>Festival Experience</span></h1>
+                    <p>The original anti-theft hydration pack, trusted by 100,000+ festival-goers. Built by ravers, for ravers.</p>
+                    <div class="hero-buttons">
+                        <a href="https://www.lunchboxpacks.com/products/hydration-pack" class="btn btn-accent" target="_blank">Shop Hydration Packs</a>
+                        <a href="#products" class="btn btn-outline" style="border-color: white; color: white;">View All Products</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://www.lunchboxpacks.com/cdn/shop/files/HP_Cloud_White_Front_V3_2.png?v=1729894418" alt="Lunchbox Hydration Pack">
+                    <div class="hero-badge">⭐ 4.84 Rating</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Stats Bar -->
+    <section class="stats-bar">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>100K+</h3>
+                    <p>Happy Ravers</p>
+                </div>
+                <div class="stat-item">
+                    <h3>1,700+</h3>
+                    <p>5-Star Reviews</p>
+                </div>
+                <div class="stat-item">
+                    <h3>500+</h3>
+                    <p>Events Attended</p>
+                </div>
+                <div class="stat-item">
+                    <h3>#1</h3>
+                    <p>Festival Pack Brand</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Partners Section -->
+    <section class="partners">
+        <div class="container">
+            <p class="partners-title">Official Partner of</p>
+            <div class="partners-grid">
+                <img src="https://www.lunchboxpacks.com/cdn/shop/files/Insomniac_White_Logo.png?v=1724972192" alt="Insomniac Events" style="filter: none; opacity: 1;">
+                <img src="https://www.lunchboxpacks.com/cdn/shop/files/buzzfeed-logo.png?v=1714088899" alt="BuzzFeed">
+                <img src="https://www.lunchboxpacks.com/cdn/shop/files/edm-logo.png?v=1714088899" alt="EDM.com">
+                <img src="https://www.lunchboxpacks.com/cdn/shop/files/forbes-logo.png?v=1714088899" alt="Forbes">
+            </div>
+        </div>
+    </section>
+    
+    <!-- Community Section -->
+    <section class="community" id="community">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label">Our Community</p>
+                <h2 class="section-title">Join the Lunchbox Fam</h2>
+                <p class="section-subtitle">We're more than a pack—we're a community of festival lovers united by music, experiences, and protecting what matters.</p>
+            </div>
+            <div class="community-grid">
+                <div class="community-card">
+                    <img src="https://www.lunchboxpacks.com/cdn/shop/files/lifestyle-festival-crowd.jpg?v=1714088899" alt="Festival Community">
+                    <div class="community-card-content">
+                        <h3>Official Insomniac Partner</h3>
+                        <p>The only pack brand trusted by the world's largest dance music festival producer. EDC, Beyond Wonderland, and more.</p>
+                    </div>
+                </div>
+                <div class="community-card">
+                    <img src="https://www.lunchboxpacks.com/cdn/shop/files/lifestyle-group-packs.jpg?v=1714088899" alt="Community Groups">
+                    <div class="community-card-content">
+                        <h3>10K+ Discord Members</h3>
+                        <p>Connect with fellow ravers, share festival tips, find ride shares, and join group camping — it's a whole vibe.</p>
+                    </div>
+                </div>
+                <div class="community-card">
+                    <img src="https://www.lunchboxpacks.com/cdn/shop/files/lifestyle-content-creator.jpg?v=1714088899" alt="Content Creators">
+                    <div class="community-card-content">
+                        <h3>Creator Partnership Program</h3>
+                        <p>Work with us! Content creators and festival influencers get exclusive perks, early drops, and commission opportunities.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Product Suite -->
+    <section class="products" id="products">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label">Product Suite</p>
+                <h2 class="section-title">Find Your Perfect Pack</h2>
+                <p class="section-subtitle">From full hydration packs to compact slings, we've got every festival need covered.</p>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="https://www.lunchboxpacks.com/cdn/shop/files/HP_Cloud_Black_Front_V3.png?v=1729894418" alt="Lunchbox Hydration Pack">
+                    <div class="product-card-content">
+                        <h3>Lunchbox Hydration Pack</h3>
+                        <span class="price">$109.00</span>
+                        <p class="tagline">The OG anti-theft festival pack</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://www.lunchboxpacks.com/cdn/shop/files/CHP_Cloud_Clear_Front_V3.png?v=1729894418" alt="Clear Hydration Pack">
+                    <div class="product-card-content">
+                        <h3>Clear Hydration Pack</h3>
+                        <span class="price">$109.00</span>
+                        <p class="tagline">Stadium-approved transparent design</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://www.lunchboxpacks.com/cdn/shop/files/Sling_Black_Angled_V3.png?v=1729894418" alt="Sling Pack">
+                    <div class="product-card-content">
+                        <h3>Sling Pack</h3>
+                        <span class="price">$69.00</span>
+                        <p class="tagline">Compact crossbody essential</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://www.lunchboxpacks.com/cdn/shop/files/CMP_Clear_Front_V3.png?v=1729894418" alt="Clear Mini Pack">
+                    <div class="product-card-content">
+                        <h3>Clear Mini Pack</h3>
+                        <span class="price">$69.00</span>
+                        <p class="tagline">Mighty but mini</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Featured Product -->
+    <section class="featured-product">
+        <div class="container">
+            <div class="featured-grid">
+                <div class="featured-image">
+                    <img src="https://www.lunchboxpacks.com/cdn/shop/files/HP_Cloud_Black_Back_V3.png?v=1729894418" alt="Lunchbox Hydration Pack Features">
+                </div>
+                <div class="featured-content">
+                    <p class="section-label" style="color: var(--accent);">Flagship Product</p>
+                    <h2>Lunchbox Hydration Pack</h2>
+                    <p class="price-tag">$109.00</p>
+                    <ul class="feature-list">
+                        <li>Anti-theft zipper clip system — no one's getting in</li>
+                        <li>2L insulated hydration bladder with quick-refill access</li>
+                        <li>No external facing zippers — maximum security</li>
+                        <li>8L total storage with 6 interior pockets</li>
+                        <li>Phone pocket on shoulder strap — always accessible</li>
+                        <li>Cloud mesh backing — breathable all-day comfort</li>
+                        <li>Security line approved at all Insomniac events</li>
+                        <li>Interchangeable skins + lightshow wire compatible</li>
+                    </ul>
+                    <a href="https://www.lunchboxpacks.com/products/hydration-pack" class="btn btn-accent" target="_blank">Shop Hydration Pack</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Customization -->
+    <section class="customization" id="customization">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label">Make It Yours</p>
+                <h2 class="section-title">Endless Customization</h2>
+                <p class="section-subtitle">Express your identity with interchangeable skins, lightshow wires, and accessories that match your vibe.</p>
+            </div>
+            <div class="customization-showcase">
+                <div class="customization-item">
+                    <img src="https://www.lunchboxpacks.com/cdn/shop/files/skins-showcase-grid.jpg?v=1714088899" alt="Interchangeable Skins">
+                    <h3>Interchangeable Skins</h3>
+                    <p>50+ designs from artist collabs, limited drops, and classic patterns. Zip on a new look in seconds.</p>
+                </div>
+                <div class="customization-item">
+                    <img src="https://www.lunchboxpacks.com/cdn/shop/files/lightshow-wires-demo.jpg?v=1714088899" alt="Lightshow Wires">
+                    <h3>Lightshow EL-Wires</h3>
+                    <p>Glow in the dark with battery-powered EL wires that thread through your pack. Multiple colors available.</p>
+                </div>
+                <div class="customization-item">
+                    <img src="https://www.lunchboxpacks.com/cdn/shop/files/accessories-upgrades.jpg?v=1714088899" alt="Accessories">
+                    <h3>Accessories & Upgrades</h3>
+                    <p>Insulated hoses, extra bladders, carabiner clips, and more. Upgrade your setup for any adventure.</p>
+                </div>
+            </div>
+            <div style="text-align: center;">
+                <a href="https://www.lunchboxpacks.com/pages/lunchbox-accessories" class="btn btn-primary" target="_blank">Shop All Accessories</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Social Proof -->
+    <section class="social-proof">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label">The Lunchbox Fam</p>
+                <h2 class="section-title">Real Ravers. Real Moments.</h2>
+                <p class="section-subtitle">Join the community sharing their festival experiences with Lunchbox.</p>
+            </div>
+            <div class="social-grid">
+                <div class="social-item">
+                    <img src="https://www.lunchboxpacks.com/cdn/shop/files/ugc-festival-1.jpg?v=1714088899" alt="Festival moment">
+                    <div class="social-overlay"><span>@raverfam</span></div>
+                </div>
+                <div class="social-item">
+                    <img src="https://www.lunchboxpacks.com/cdn/shop/files/ugc-festival-2.jpg?v=1714088899" alt="Festival moment">
+                    <div class="social-overlay"><span>@edclv</span></div>
+                </div>
+                <div class="social-item">
+                    <img src="https://www.lunchboxpacks.com/cdn/shop/files/ugc-festival-3.jpg?v=1714088899" alt="Festival moment">
+                    <div class="social-overlay"><span>@lunchboxfam</span></div>
+                </div>
+                <div class="social-item">
+                    <img src="https://www.lunchboxpacks.com/cdn/shop/files/ugc-festival-4.jpg?v=1714088899" alt="Festival moment">
+                    <div class="social-overlay"><span>@ravelife</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Reviews -->
+    <section class="reviews" id="reviews">
+        <div class="container">
+            <div class="section-header">
+                <p class="section-label">Customer Reviews</p>
+                <h2 class="section-title">Trusted by 100,000+ Ravers</h2>
+            </div>
+            <div class="reviews-stats">
+                <div class="reviews-rating">4.84</div>
+                <div class="reviews-stars">★★★★★</div>
+                <div class="reviews-count">Based on 1,703 reviews</div>
+            </div>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"It's so spacious and gives me the peace of mind at any crowded event that my belongings will be safe. The biggest and best feature has to be the phone pocket."</p>
+                    <div class="review-author">
+                        <div class="review-author-avatar">D</div>
+                        <div class="review-author-info">
+                            <h4>Daisy</h4>
+                            <span>Verified Buyer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"This bag completely changed my festival experience. As a chronic over-packer and untrusting person, this is the only bag that will fit all of your things AND prevent them from being stolen."</p>
+                    <div class="review-author">
+                        <div class="review-author-avatar">N</div>
+                        <div class="review-author-info">
+                            <h4>Nedia</h4>
+                            <span>Verified Buyer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"My lunchbox is a necessity for festivals and recently have been taking it on the mountains for snowboarding. The hydration bag alone is amazing, and never leaks. Lunchbox is definitely my favorite."</p>
+                    <div class="review-author">
+                        <div class="review-author-avatar">J</div>
+                        <div class="review-author-info">
+                            <h4>Jenny</h4>
+                            <span>Verified Buyer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Got my first lunchbox pack for EDC and absolutely loved it! Whatever was in or attached to my lunchbox got neither lost or stolen. My friends took a full minute to figure out how to open it!"</p>
+                    <div class="review-author">
+                        <div class="review-author-avatar">M</div>
+                        <div class="review-author-info">
+                            <h4>Marine</h4>
+                            <span>Verified Buyer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Best purchase I've ever made for festivals. The anti-theft feature gives me so much peace of mind dancing in crowds. Plus the hydration system is genius—no more waiting in water lines!"</p>
+                    <div class="review-author">
+                        <div class="review-author-avatar">A</div>
+                        <div class="review-author-info">
+                            <h4>Alex</h4>
+                            <span>Verified Buyer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"I was skeptical about the price at first, but after 3 festivals this thing has paid for itself. Quality is insane, comfortable all day, and I've never worried about pickpockets once."</p>
+                    <div class="review-author">
+                        <div class="review-author-avatar">K</div>
+                        <div class="review-author-info">
+                            <h4>Kai</h4>
+                            <span>Verified Buyer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Protect Your Next Adventure?</h2>
+            <p>Join 100,000+ festival-goers who trust Lunchbox to keep their belongings safe while they dance.</p>
+            <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                <a href="https://www.lunchboxpacks.com/products/hydration-pack" class="btn btn-accent" target="_blank">Shop Hydration Pack — $109</a>
+                <a href="https://www.lunchboxpacks.com/pages/get-lunchbox" class="btn btn-outline" style="border-color: white; color: white;" target="_blank">View All Packs</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="https://www.lunchboxpacks.com/cdn/shop/files/lunchbox-logo-black.png?v=1714088899" alt="Lunchbox Packs">
+                    <p>The original anti-theft festival pack. Built by ravers, for ravers. Protecting your belongings since 2019.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="https://www.lunchboxpacks.com/pages/get-lunchbox" target="_blank">All Packs</a></li>
+                        <li><a href="https://www.lunchboxpacks.com/pages/lunchbox-accessories" target="_blank">Skins</a></li>
+                        <li><a href="https://www.lunchboxpacks.com/pages/lunchbox-accessories#lightshow" target="_blank">Lightshow Wires</a></li>
+                        <li><a href="https://www.lunchboxpacks.com/pages/lunchbox-accessories" target="_blank">Accessories</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Community</h4>
+                    <ul>
+                        <li><a href="https://discord.com/invite/jVa5fPR2QE" target="_blank">Discord</a></li>
+                        <li><a href="https://www.instagram.com/lunchboxpacks" target="_blank">Instagram</a></li>
+                        <li><a href="https://www.tiktok.com/@lunchboxpacks" target="_blank">TikTok</a></li>
+                        <li><a href="https://www.lunchboxpacks.com/pages/meet-the-fam" target="_blank">Fam Inspiration</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="https://www.lunchboxpacks.com/pages/warranty-returns" target="_blank">Shipping & Returns</a></li>
+                        <li><a href="mailto:fam@itsmylunchbox.com">Contact Us</a></li>
+                        <li><a href="https://www.lunchboxpacks.com/pages/privacy-policy" target="_blank">Privacy Policy</a></li>
+                        <li><a href="https://www.lunchboxpacks.com/pages/lunchbox-terms-of-use" target="_blank">Terms of Use</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Lunchbox Packs. All rights reserved. | Made with ❤️ for the rave community</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
